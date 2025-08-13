@@ -1,5 +1,6 @@
-// app/page.tsx
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 import { prisma } from "@/lib/db";
 
@@ -12,7 +13,7 @@ export default async function Home() {
     orderBy: { createdAt: "desc" },
   });
 
-  // infer a single item type from the array
+  // infer the element type of the array
   type ProductItem = (typeof products)[number];
 
   return (

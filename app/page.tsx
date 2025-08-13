@@ -1,4 +1,6 @@
 // app/page.tsx
+export const runtime = "nodejs";
+
 import { prisma } from "@/lib/db";
 
 function price(cents: number) {
